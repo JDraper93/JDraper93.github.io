@@ -1,0 +1,227 @@
+html, body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #f0f0f0;
+}
+
+.wrapper {
+    padding: 10px;
+    margin-inline: auto;
+    scroll-margin-top: 80px; /* Adjust this value to match your header height */
+}
+
+header {
+    position: fixed; /* Make the header fixed */
+    margin: 0;
+    padding: 0;
+    top: 0; /* Stick it to the top */
+    left: 0; /* Stick it to the left */
+    width: 100%; /* Take up the full width */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #284991;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    z-index: 100; /* Ensure it's on top of other content */
+}
+
+header img {
+    max-width: 150px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.primary-navigation ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.primary-navigation li {
+    margin: 0;
+    padding: 0;
+}
+
+.primary-navigation a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    display: block;
+}
+
+#home a img {
+    display: block; /*remove any unneeded spacing*/
+    width: 100%; /* Make the image fill the anchor */
+    height: auto;
+}
+
+#home a:hover,
+#home a:focus-visible,
+.primary-navigation a:hover,
+.primary-navigation a:focus-visible {
+    background-color: #203a74;
+    border-radius: 5px;
+}
+
+main {
+    padding: 60px 20px 20px 20px; /* Add top padding to prevent content overlap */
+}
+
+section {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+    margin-block: 15px;
+}
+/* 
+#about {
+    padding: 10px;
+} */
+
+.map-container {
+    position: relative; /* Needed for absolute positioning of iframe */
+    padding-bottom: 75%; /* Adjust this based on your map's aspect ratio (height/width * 100) */
+    height: 0;
+    overflow: hidden;
+}
+
+.contact-columns {
+    display: flex;
+    gap: 20px; /* Space between columns */
+}
+
+.contact-text {
+    flex: 1; /* Take up remaining space */
+}
+
+.contact-details {
+    flex: 1; /* Take up remaining space */
+    border: 1px solid #f0f0f0;
+    border-radius: 5%;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center; /* Align icon and text vertically */
+    /* border: 1px solid #ddd; */
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.contact-item .icon {
+    margin-right: 20px;
+}
+
+.contact-item .icon img {
+    height: 50px;
+    width 50px;
+}
+
+.contact-item .text a,
+.contact-item .text p {
+    margin: 0;
+}
+
+.contact-item .text a {
+    color: #284991;
+    text-decoration: none;
+}
+.contact-item .text a:hover,
+.contact-item .text a:focus-visible{
+    text-decoration: underline;
+}
+
+.contact-details div {
+    margin-bottom: 10px; /* Space between contact items */
+}
+
+.map-link a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #284991;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.map-link a:hover,
+.map-link a:focus-visible {
+    background-color: #203a74;
+}
+
+.phone a,
+.email a {
+    color: #284991;
+    text-decoration: none;
+}
+
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.icon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.icon-grid-item {
+    position: relative; /* Needed for absolute positioning of text */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Align items to the top */
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    min-height: 150px;
+    border-radius: 5%;
+}
+
+.icon-image-container {
+    /* Allow space for image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; /* allow image container to grow */
+}
+
+.icon-grid-item img {
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: contain;
+}
+
+.icon-text-container {
+    position: absolute;
+    bottom: 10px; /* Adjust as needed */
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.icon-text-container p {
+    margin: 0;
+}
+/* Optional: Add hover effects */
+/* .icon-grid-item:hover {
+    background-color: #f9f9f9;
+} */
+
+footer {
+    text-align: center;
+    padding: 5px;
+    background-color: #f0f0f0;
+}
