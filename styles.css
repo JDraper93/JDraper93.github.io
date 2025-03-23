@@ -222,6 +222,13 @@ section {
     text-decoration: none;
 }
 
+section.icon-grid {
+    /* Your CSS rules here */
+    display: grid;
+    justify-content: center;
+    /* ... other styles ... */
+}
+
 .icon-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 25vw)); /* Adjusted minmax */
